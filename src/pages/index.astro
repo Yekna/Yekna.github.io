@@ -2,9 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 
-const URL = import.meta.env.API_URL;
-const res = await fetch(URL);
-const { status } = await res.json();
+// const URL = import.meta.env.API_URL;
+// const res = await fetch(URL);
+// const { status } = await res.json();
 ---
 
 <Layout title="Uros Jeknic">
@@ -60,7 +60,7 @@ const { status } = await res.json();
 		</header>
 		<main class="flex-1">
 			<section id="about">
-				<p>Employment Status: <span>{status}</span></p>
+				<p>Employment Status: <span>Unemployed</span></p>
 				<p>Hello, I'm a seasoned web developer with three years of hands-on experience in crafting digital solutions that seamlessly blend SEO and optimization performance.</p>
 				<p>My passion lies in translating clients' visions into user- friendly, high-performing websites that not only meet but exceed their expectations.</p>
 				<p>I use arch and neovim btw.</p>
