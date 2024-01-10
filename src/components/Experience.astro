@@ -13,13 +13,13 @@ const {
 
 <a href="#">
     <article class="group border-[1px] rounded-lg transition-[background] duration-200 border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800">
-        <p class="col-span-2">{date}</p>
-        <div class="col-span-6 grid gap-2">
-            <h4 class="group-hover:text-teal-300">{title}</h4>
-            <h5 class="text-slate-500">{role}</h5>
-            <p>{description}</p>
-            <ul class="flex gap-2 flex-wrap">
-                {stack.map((s) => <li class="bg-teal-400/10 py-1 px-2 rounded-full text-teal-300">{s}</li>)}
+        <p class="col-span-2 text-sm font-semibold tracking-wide uppercase">{date}</p>
+        <div class="col-span-6">
+            <h4 class="group-hover:text-teal-300 font-medium leading-tight">{title}</h4>
+            <h5 class="text-slate-500 font-medium leading-snug">{role}</h5>
+            <p class="mt-2 text-sm leading-normal">{description}</p>
+            <ul class="flex gap-2 flex-wrap mt-2">
+                {stack.map((s) => <li class="bg-teal-400/10 py-1 px-2 rounded-full text-teal-300 text-sm">{s}</li>)}
             </ul>
         </div>
     </article>
