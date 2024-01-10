@@ -1,7 +1,7 @@
 ---
-title: Salas Djordjevic
-role: Fullstack
+title: Local Messuage Storage Tracker
+role: Fullstack Developer
 date: JAN 2021 - JUN 2021
-description: Worked on a WordPress website for reserving tours in Portugal. Created the custom WordPress plugins and widgets used inside the Elementor web builder and went through the source code for some of the plugins we use to integrate them with the design and flow the designer envisioned.
-stack: [Angular]
+description: Where I first learned how to write good backend code (models, migrations, ORMs, indexing, resolvers, DTOs etc.). Used NestJS because it has a similar syntax to Angular so it made the most sense.
+stack: [Angular, NestJS, PostgreSQL]
 ---
