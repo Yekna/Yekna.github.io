@@ -8,3 +8,23 @@ type Props = {
 const { experience } = Astro.props;
 ---
 {experience.map((e) => <Experience experience={e} />)}
+
+<script>
+    const articles = document.querySelectorAll('article');
+    articles.forEach(article => {
+        article.addEventListener('mouseover', handleMouseOver);
+        article.addEventListener('mouseleave', handleMouseLeave);
+    })
+
+    function handleMouseOver(event: Event) {
+        articles.forEach(article => {
+            if(article !== event.currentTarget) {
+                article.style.opacity = "0.5";
+            }
+        })
+    }
+
+    function handleMouseLeave() {
+        articles.forEach(article => article.style.opacity = "1");
+    }
+</script>

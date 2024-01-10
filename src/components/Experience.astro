@@ -12,7 +12,7 @@ const {
 ---
 
 <a href="#">
-    <article class="group border-[1px] rounded-lg transition-[background] duration-200 border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800">
+    <article class="group border-[1px] rounded-lg border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800">
         <p class="col-span-2 text-sm font-semibold tracking-wide uppercase">{date}</p>
         <div class="col-span-6">
             <h4 class="group-hover:text-teal-300 font-medium leading-tight">{title}</h4>
@@ -24,3 +24,18 @@ const {
         </div>
     </article>
 </a>
+
+<style>
+    article {
+        transition-property: background opacity;
+    }
+
+    article h4 {
+        transition-property: color;
+    }
+
+    article, article h4 {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+</style>
