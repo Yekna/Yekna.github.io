@@ -1,10 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-
-// const URL = import.meta.env.API_URL;
-// const res = await fetch(URL);
-// const { status } = await res.json();
+import Experiences from "../components/Experiences.astro";
+const experience = await getCollection('experience');
 ---
 
 <Layout title="Uros Jeknic">
@@ -65,7 +64,8 @@ import { Icon } from "astro-icon/components";
 				<p>My passion lies in translating clients' visions into user- friendly, high-performing websites that not only meet but exceed their expectations.</p>
 				<p>I use arch and neovim btw.</p>
 			</section>
-			<section id="experience">
+			<section id="experience" class="grid gap-10">
+				<Experiences experience={experience} />
 			</section>
 			<section id="projects">
 			</section>
