@@ -4,13 +4,17 @@ import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import Experiences from "../components/Experiences.astro";
 import Projects from "../components/Projects.astro";
-const experience = await getCollection('experience');
-const projects = await getCollection('projects');
+const experience = await getCollection("experience");
+const projects = await getCollection("projects");
 ---
 
 <Layout title="Uros Jeknic">
-	<div class="max-w-7xl w-4/5 mx-auto lg:flex [&>*]:lg:pt-24 lg:gap-5 xl:px-24">
-		<header class="lg:top-0 lg:sticky lg:pb-24 lg:flex lg:flex-col lg:max-h-screen flex-1 lg:justify-between">
+	<div
+		class="max-w-7xl w-4/5 mx-auto lg:flex [&>*]:lg:pt-24 lg:gap-5 xl:px-24"
+	>
+		<header
+			class="lg:top-0 lg:sticky lg:pb-24 lg:flex lg:flex-col lg:max-h-screen flex-1 lg:justify-between"
+		>
 			<div>
 				<h1 class="lg:text-5xl font-bold">Uros Jeknic</h1>
 				<h2 class="uppercase lg:text-xl">Fullstack Developer</h2>
@@ -19,7 +23,9 @@ const projects = await getCollection('projects');
 					beyond.
 				</p>
 				<nav id="links">
-					<ul class="uppercase text-sm font-bold mt-16 text-slate-500">
+					<ul
+						class="uppercase text-sm font-bold mt-16 text-slate-500"
+					>
 						<li><a class="list" href="#about">About</a></li>
 						<li>
 							<a class="list" href="#experience">Experience</a>
@@ -62,24 +68,40 @@ const projects = await getCollection('projects');
 		<main class="flex-1">
 			<section id="about">
 				<p>Employment Status: <span>Unemployed</span></p>
-				<p>Hello, I'm a seasoned web developer with three years of hands-on experience in crafting digital solutions that seamlessly blend SEO and optimization performance.</p>
-				<p>My passion lies in translating clients' visions into user- friendly, high-performing websites that not only meet but exceed their expectations.</p>
+				<p>
+					Hello, I'm a seasoned web developer with three years of
+					hands-on experience in crafting digital solutions that
+					seamlessly blend SEO and optimization performance.
+				</p>
+				<p>
+					My passion lies in translating clients' visions into user-
+					friendly, high-performing websites that not only meet but
+					exceed their expectations.
+				</p>
 				<p>I use arch and neovim btw.</p>
 			</section>
 			<section id="experience" class="grid gap-10">
 				<Experiences experience={experience} />
+				<a
+					class="group hover:text-teal-300 leading-tight font-semibold text-base"
+					target="_blank"
+					href="/CV.pdf">View Full Resume <Icon class="inline group-hover:rotate-180 transition-transform" name="jam:arrow-down-left" size={19} /></a
+				>
 			</section>
 			<section id="projects">
 				<Projects projects={projects} />
 			</section>
-			<section id="stack" class="md:grid lg:grid-cols-3 md:grid-cols-2 [&>*]:outline [&>*]:outline-1 text-center">
+			<section
+				id="stack"
+				class="md:grid lg:grid-cols-3 md:grid-cols-2 [&>*]:outline [&>*]:outline-1 text-center"
+			>
 			</section>
 		</main>
 	</div>
 </Layout>
 
 <style>
-	p span, 
+	p span,
 	p a {
 		color: rgb(226 232 240);
 	}
@@ -131,20 +153,22 @@ const projects = await getCollection('projects');
 	}
 </style>
 <script>
-	const links = document.querySelectorAll('#links a');
-	links.forEach(link => {
-		link.addEventListener('click', e => {
+	const links = document.querySelectorAll("#links a");
+	links.forEach((link) => {
+		link.addEventListener("click", (e) => {
 			e.preventDefault();
 
-			const targetId = (e.target as HTMLAnchorElement).getAttribute('href')!.substring(1);
-            const targetElement = document.getElementById(targetId);
+			const targetId = (e.target as HTMLAnchorElement)
+				.getAttribute("href")!
+				.substring(1);
+			const targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 6 * 16,
-                    behavior: 'smooth'
-                });
-            }
-		})
-	})
+			if (targetElement) {
+				window.scrollTo({
+					top: targetElement.offsetTop - 6 * 16,
+					behavior: "smooth",
+				});
+			}
+		});
+	});
 </script>
