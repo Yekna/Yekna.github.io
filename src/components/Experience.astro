@@ -6,20 +6,32 @@ type Props = {
 
 const {
     experience: {
-        data: { date, title, description, stack, role },
+        data: { date, title, description, stack, role, href },
     },
 } = Astro.props;
 ---
 
-<a href="#">
-    <article class="group border-[1px] rounded-lg border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800">
-        <p class="col-span-2 text-sm font-semibold tracking-wide uppercase">{date}</p>
+<a target={href !== "" ? "_blank" : "_self"} href={href}>
+    <article
+        class="group border-[1px] rounded-lg border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800"
+    >
+        <p class="col-span-2 text-sm font-semibold tracking-wide uppercase">
+            {date}
+        </p>
         <div class="col-span-6">
-            <h4 class="group-hover:text-teal-300 font-medium leading-tight">{title}</h4>
+            <h4 class="group-hover:text-teal-300 font-medium leading-tight">
+                {title}
+            </h4>
             <h5 class="text-slate-500 font-medium leading-snug">{role}</h5>
             <p class="mt-2 text-sm leading-normal">{description}</p>
             <ul class="flex gap-2 flex-wrap mt-2">
-                {stack.map((s) => <li class="bg-teal-400/10 py-1 px-2 rounded-full text-teal-300 text-sm">{s}</li>)}
+                {
+                    stack.map((s) => (
+                        <li class="bg-teal-400/10 py-1 px-2 rounded-full text-teal-300 text-sm">
+                            {s}
+                        </li>
+                    ))
+                }
             </ul>
         </div>
     </article>
@@ -34,7 +46,8 @@ const {
         transition-property: color;
     }
 
-    article, article h4 {
+    article,
+    article h4 {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 200ms;
     }

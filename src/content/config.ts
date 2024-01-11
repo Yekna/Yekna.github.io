@@ -7,6 +7,7 @@ const experience = defineCollection({
         date: z.string(),
         description: z.string(),
         stack: z.array(z.string()),
+        href: z.string(),
     }),
 });
 
