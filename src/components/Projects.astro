@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Project from "./Project.astro";
+type Props = {
+    projects: CollectionEntry<"projects">[];
+};
+
+const { projects } = Astro.props;
+---
+{projects.map((p) => <Project project={p} />)}
+
+<!-- <script>
+    const articles = document.querySelectorAll('article');
+    articles.forEach(article => {
+        article.addEventListener('mouseover', handleMouseOver);
+        article.addEventListener('mouseleave', handleMouseLeave);
+    })
+
+    function handleMouseOver(event: Event) {
+        articles.forEach(article => {
+            if(article !== event.currentTarget) {
+                article.style.opacity = "0.5";
+            }
+        })
+    }
+
+    function handleMouseLeave() {
+        articles.forEach(article => article.style.opacity = "1");
+    }
+</script> -->
