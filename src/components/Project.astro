@@ -14,14 +14,14 @@ const {
 
 <a target={href !== "" ? "_blank" : "_self"} href={href}>
     <article
-        class="group border-[1px] rounded-lg border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800"
+        class="group border border-transparent hover:border-teal-100 rounded-lg gap-5 sm:grid-cols-8 grid p-5 hover:bg-slate-800"
     >
         <Image
-            class="col-span-3 rounded"
+            class="col-span-3 rounded-lg aspect-video"
             src={image}
             alt={title}
-            width={128}
-            height={128}
+            width={150}
+            height={150}
             format="webp"
         />
         <div class="col-span-5">
@@ -42,7 +42,7 @@ const {
     </article>
 </a>
 
-<!-- <style>
+<style>
     article {
         transition-property: background opacity;
     }
@@ -51,9 +51,14 @@ const {
         transition-property: color;
     }
 
+    article img {
+        transition-property: border;
+    }
+
     article,
-    article h4 {
+    article h4,
+    article img {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 200ms;
     }
-</style> -->
+</style>

@@ -88,7 +88,7 @@ const projects = await getCollection("projects");
 					href="/CV.pdf">View Full Resume <Icon class="inline group-hover:translate-x-1 transition-transform" name="jam:chevrons-right" size={19} /></a
 				>
 			</section>
-			<section id="projects">
+			<section id="projects" class="grid gap-10">
 				<Projects projects={projects} />
 			</section>
 			<section
@@ -171,4 +171,5 @@ const projects = await getCollection("projects");
 			}
 		});
 	});
+
 </script>
