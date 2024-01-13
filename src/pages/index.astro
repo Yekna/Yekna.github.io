@@ -26,12 +26,15 @@ const projects = await getCollection("projects");
 					<ul
 						class="uppercase text-sm font-bold mt-16 text-slate-500"
 					>
-						<li><a class="list" href="#about">About</a></li>
+						<li>
+							<a class="list" href="#about">About</a>
+						</li>
 						<li>
 							<a class="list" href="#experience">Experience</a>
 						</li>
-						<li><a class="list" href="#projects">Projects</a></li>
-						<li><a class="list" href="#stack">Stack</a></li>
+						<li>
+							<a class="list" href="#projects">Projects</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -85,7 +88,12 @@ const projects = await getCollection("projects");
 				<a
 					class="group hover:text-teal-300 leading-tight font-semibold"
 					target="_blank"
-					href="/CV.pdf">View Full Resume <Icon class="inline group-hover:translate-x-1 transition-transform" name="jam:chevrons-right" size={19} /></a
+					href="/CV.pdf"
+					>View Full Resume <Icon
+						class="inline group-hover:translate-x-1 transition-transform"
+						name="jam:chevrons-right"
+						size={19}
+					/></a
 				>
 			</section>
 			<section id="projects" class="grid gap-10">
@@ -171,5 +179,4 @@ const projects = await getCollection("projects");
 			}
 		});
 	});
-
 </script>
