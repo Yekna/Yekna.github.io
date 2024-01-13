@@ -13,7 +13,7 @@ const {
 
 <a target={href !== "" ? "_blank" : "_self"} href={href}>
     <article
-        class="group border rounded-lg border-transparent hover:border-teal-100 sm:grid-cols-8 grid gap-5 p-5 hover:bg-slate-800"
+        class="group border rounded-lg border-transparent hover:border-teal-100 lg:grid-cols-8 lg:grid gap-5 p-5 hover:bg-slate-800"
     >
         <p class="col-span-2 text-sm font-semibold tracking-wide uppercase">
             {date}
@@ -38,6 +38,18 @@ const {
 </a>
 
 <style>
+    /* MOBILE */
+    @media (hover: none) {
+        article {
+            background-color: rgb(30 41 59);
+            border-color: rgb(204 251 241);
+        }
+
+        h4 {
+            color: rgb(94 234 212);
+        }
+    }
+
     article {
         transition-property: background opacity;
     }

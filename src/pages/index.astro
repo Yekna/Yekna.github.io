@@ -9,174 +9,173 @@ const projects = await getCollection("projects");
 ---
 
 <Layout title="Uros Jeknic">
-	<div
-		class="max-w-7xl w-4/5 mx-auto lg:flex [&>*]:lg:pt-24 lg:gap-5 xl:px-24"
-	>
-		<header
-			class="lg:top-0 lg:sticky lg:pb-24 lg:flex lg:flex-col lg:max-h-screen flex-1 lg:justify-between"
-		>
-			<div>
-				<h1 class="lg:text-5xl font-bold">Uros Jeknic</h1>
-				<h2 class="uppercase lg:text-xl">Fullstack Developer</h2>
-				<p class="max-w-xs">
-					I build pixel-perfect, accessible products for the web and
-					beyond.
-				</p>
-				<nav id="links">
-					<ul
-						class="uppercase text-sm font-bold mt-16 text-slate-500"
-					>
-						<li>
-							<a class="list" href="#about">About</a>
-						</li>
-						<li>
-							<a class="list" href="#experience">Experience</a>
-						</li>
-						<li>
-							<a class="list" href="#projects">Projects</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<ul class="flex gap-5">
-				<li>
-					<a
-						href="https://github.com/Yekna/"
-						target="_blank"
-						class="hover:text-slate-400 text-slate-500"
-					>
-						<Icon name="jam:github-square" size={32} />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://www.linkedin.com/in/uro%C5%A1-jekni%C4%87-a780ab259/"
-						target="_blank"
-						class="hover:text-slate-400 text-slate-500"
-					>
-						<Icon name="jam:linkedin-square" size={32} />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://www.fiverr.com/users/yeknaa/"
-						target="_blank"
-						class="hover:text-slate-400 text-slate-500"
-					>
-						<Icon name="jam:fiverr-square" size={32} />
-					</a>
-				</li>
-			</ul>
-		</header>
-		<main class="flex-1">
-			<section id="about">
-				<p>Employment Status: <span>Unemployed</span></p>
-				<p>
-					Hello, I'm a seasoned web developer with three years of
-					hands-on experience in crafting digital solutions that
-					seamlessly blend SEO and optimization performance.
-				</p>
-				<p>
-					My passion lies in translating clients' visions into user-
-					friendly, high-performing websites that not only meet but
-					exceed their expectations.
-				</p>
-				<p>I use arch and neovim btw.</p>
-			</section>
-			<section id="experience" class="grid gap-10">
-				<Experiences experience={experience} />
-				<a
-					class="group hover:text-teal-300 leading-tight font-semibold"
-					target="_blank"
-					href="/CV.pdf"
-					>View Full Resume <Icon
-						class="inline group-hover:translate-x-1 transition-transform"
-						name="jam:chevrons-right"
-						size={19}
-					/></a
-				>
-			</section>
-			<section id="projects" class="grid gap-10">
-				<Projects projects={projects} />
-			</section>
-			<section
-				id="stack"
-				class="md:grid lg:grid-cols-3 md:grid-cols-2 [&>*]:outline [&>*]:outline-1 text-center"
-			>
-			</section>
-		</main>
-	</div>
+  <div
+    class="max-w-7xl w-4/5 mx-auto lg:flex [&>*]:pt-12 [&>*]:lg:pt-24 lg:gap-5 xl:px-24"
+  >
+    <header
+      class="lg:top-0 lg:sticky lg:pb-24 lg:flex lg:flex-col lg:max-h-screen flex-1 lg:justify-between"
+    >
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-bold">Uros Jeknic</h1>
+        <h2 class="uppercase text-lg">Fullstack Developer</h2>
+        <p class="max-w-xs mt-3">
+          I build pixel-perfect, accessible products for the web and beyond.
+        </p>
+        <ul
+          id="links"
+          class="hidden lg:block uppercase text-sm font-bold mt-16 text-slate-500"
+        >
+          <li>
+            <a class="list" href="#about">About</a>
+          </li>
+          <li>
+            <a class="list" href="#experience">Experience</a>
+          </li>
+          <li>
+            <a class="list" href="#projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="flex gap-5 mt-3">
+        <li>
+          <a
+            href="https://github.com/Yekna/"
+            target="_blank"
+            class="hover:text-slate-400 text-slate-500"
+          >
+            <Icon name="jam:github-square" size={32} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/uro%C5%A1-jekni%C4%87-a780ab259/"
+            target="_blank"
+            class="hover:text-slate-400 text-slate-500"
+          >
+            <Icon name="jam:linkedin-square" size={32} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.fiverr.com/users/yeknaa/"
+            target="_blank"
+            class="hover:text-slate-400 text-slate-500"
+          >
+            <Icon name="jam:fiverr-square" size={32} />
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main class="flex-1">
+      <section id="about">
+        <h3 class="block lg:hidden text-xl mb-3 uppercase tracking-wide">About</h3>
+        <p>Employment Status: <span>Unemployed</span></p>
+        <p>
+          Hello, I'm a seasoned web developer with three years of hands-on
+          experience in crafting digital solutions that seamlessly blend SEO and
+          optimization performance.
+        </p>
+        <p>
+          My passion lies in translating clients' visions into user- friendly,
+          high-performing websites that not only meet but exceed their
+          expectations.
+        </p>
+        <p>I use arch and neovim btw.</p>
+      </section>
+      <section id="experience" class="grid gap-10">
+        <Experiences experience={experience} />
+        <a
+          class="group hover:text-teal-300 leading-tight font-semibold"
+          target="_blank"
+          href="/CV.pdf"
+          >View Full Resume <Icon
+            class="inline group-hover:translate-x-1 transition-transform"
+            name="jam:chevrons-right"
+            size={19}
+          /></a
+        >
+      </section>
+      <section id="projects" class="grid gap-10">
+        <Projects projects={projects} />
+      </section>
+      <section
+        id="stack"
+        class="md:grid lg:grid-cols-3 md:grid-cols-2 [&>*]:outline [&>*]:outline-1 text-center"
+      >
+      </section>
+    </main>
+  </div>
 </Layout>
 
 <style>
-	p span,
-	p a {
-		color: rgb(226 232 240);
-	}
+  p span,
+  p a {
+    color: rgb(226 232 240);
+  }
 
-	section p {
-		margin-bottom: 1rem;
-	}
+  section p {
+    margin-bottom: 1rem;
+  }
 
-	section {
-		margin-bottom: 9rem;
-		scroll-margin-top: 6rem;
-	}
+  section {
+    margin-bottom: 9rem;
+    scroll-margin-top: 6rem;
+  }
 
-	li {
-		padding: 0.5rem 0 0.5rem 0;
-	}
+  li {
+    padding: 0.5rem 0 0.5rem 0;
+  }
 
-	.list {
-		position: relative;
-		padding-left: 2.5rem;
-		transition-property: color width;
-	}
+  .list {
+    position: relative;
+    padding-left: 2.5rem;
+    transition-property: color width;
+  }
 
-	.list::before {
-		content: "";
-		height: 0.1rem;
-		position: absolute;
-		left: 0;
-		width: 2rem;
-		transform: translateY(-100%);
-		top: 50%;
-		background-color: rgb(100 116 139);
-		transition-property: background-color width;
-	}
+  .list::before {
+    content: "";
+    height: 0.1rem;
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    transform: translateY(-100%);
+    top: 50%;
+    background-color: rgb(100 116 139);
+    transition-property: background-color width;
+  }
 
-	.list,
-	.list::before {
-		transition-duration: 0.3s;
-	}
+  .list,
+  .list::before {
+    transition-duration: 0.3s;
+  }
 
-	.list:hover::before {
-		width: 4rem;
-		background-color: #e2e8f0;
-	}
+  .list:hover::before {
+    width: 4rem;
+    background-color: #e2e8f0;
+  }
 
-	.list:hover {
-		padding-left: 4.5rem;
-		color: #e2e8f0;
-	}
+  .list:hover {
+    padding-left: 4.5rem;
+    color: #e2e8f0;
+  }
 </style>
 <script>
-	const links = document.querySelectorAll("#links a");
-	links.forEach((link) => {
-		link.addEventListener("click", (e) => {
-			e.preventDefault();
+  const links = document.querySelectorAll("#links a");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
 
-			const targetId = (e.target as HTMLAnchorElement)
-				.getAttribute("href")!
-				.substring(1);
-			const targetElement = document.getElementById(targetId);
+      const targetId = (e.target as HTMLAnchorElement)
+        .getAttribute("href")!
+        .substring(1);
+      const targetElement = document.getElementById(targetId);
 
-			if (targetElement) {
-				window.scrollTo({
-					top: targetElement.offsetTop - 6 * 16,
-					behavior: "smooth",
-				});
-			}
-		});
-	});
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 6 * 16,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 </script>

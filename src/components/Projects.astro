@@ -7,4 +7,6 @@ type Props = {
 
 const { projects } = Astro.props;
 ---
+
+<h3 class="block lg:hidden text-xl uppercase tracking-wide">Projects</h3>
 {projects.map((p) => <Project project={p} />)}
