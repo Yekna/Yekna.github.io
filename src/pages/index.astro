@@ -72,13 +72,13 @@ const projects = await getCollection("projects");
         <p>Employment Status: <span>Unemployed</span></p>
         <p>
           Hello, I'm a seasoned web developer with three years of hands-on
-          experience in crafting digital solutions that seamlessly blend SEO and
-          optimization performance.
+          experience in crafting digital solutions that seamlessly blend <span>SEO and
+          optimization</span> performance.
         </p>
         <p>
           My passion lies in translating clients' visions into user- friendly,
-          high-performing websites that not only meet but exceed their
-          expectations.
+          high-performing websites that not only meet but <span>exceed</span> their
+          <span>expectations</span>.
         </p>
         <p>I use arch and neovim btw.</p>
       </section>
@@ -118,8 +118,14 @@ const projects = await getCollection("projects");
   }
 
   section {
-    margin-bottom: 9rem;
-    scroll-margin-top: 6rem;
+	margin-bottom: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+	section {
+		margin-bottom: 9rem;
+		scroll-margin-top: 6rem;
+  	}
   }
 
   li {
