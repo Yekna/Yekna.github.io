@@ -68,12 +68,15 @@ const projects = await getCollection("projects");
     </header>
     <main class="flex-1">
       <section id="about">
-        <h3 class="block lg:hidden text-xl mb-3 uppercase tracking-wide">About</h3>
+        <h3 class="block lg:hidden text-xl mb-3 uppercase tracking-wide">
+          About
+        </h3>
         <p>Employment Status: <span>Unemployed</span></p>
         <p>
           Hello, I'm a seasoned web developer with three years of hands-on
-          experience in crafting digital solutions that seamlessly blend <span>SEO and
-          optimization</span> performance.
+          experience in crafting digital solutions that seamlessly blend <span
+            >SEO and optimization</span
+          > performance.
         </p>
         <p>
           My passion lies in translating clients' visions into user- friendly,
@@ -98,11 +101,6 @@ const projects = await getCollection("projects");
       <section id="projects" class="grid gap-10">
         <Projects projects={projects} />
       </section>
-      <section
-        id="stack"
-        class="md:grid lg:grid-cols-3 md:grid-cols-2 [&>*]:outline [&>*]:outline-1 text-center"
-      >
-      </section>
     </main>
   </div>
 </Layout>
@@ -118,14 +116,14 @@ const projects = await getCollection("projects");
   }
 
   section {
-	margin-bottom: 4rem;
+    margin-bottom: 4rem;
   }
 
   @media (min-width: 1024px) {
-	section {
-		margin-bottom: 8rem;
-		scroll-margin-top: 6rem;
-  	}
+    section {
+      margin-bottom: 8rem;
+      scroll-margin-top: 6rem;
+    }
   }
 
   li {
