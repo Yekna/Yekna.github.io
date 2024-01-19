@@ -1,7 +1,7 @@
 # Portfolio
 
-
-![screenshot](https://yekna.github.io/screenshot.png)
+![screenshot_pc](https://yekna.github.io/screenshot_pc.png)
+![screenshot_mobile](https://yekna.github.io/screenshot_mobile.png)
 
 **BEST EXPERIENCED ON DESKTOP**
 
