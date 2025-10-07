@@ -5,7 +5,7 @@ const experience = defineCollection({
         title: z.string(),
         role: z.string(),
         date: z.string(),
-        description: z.string(),
+        description: z.union([z.string(), z.array(z.string())]),
         stack: z.array(z.string()),
         href: z.string(),
     }),
