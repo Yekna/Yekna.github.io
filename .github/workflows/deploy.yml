@@ -25,6 +25,7 @@ jobs:
         with:
           name: github-pages
           path: dist # Adjust this path if your build output is in a different folder
+          overwrite: true
 
   deploy:
     needs: build
