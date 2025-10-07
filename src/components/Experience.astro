@@ -23,7 +23,7 @@ const {
                 {title}
             </h4>
             <h5 class="text-slate-500 font-medium leading-snug">{role}</h5>
-            {typeof description === "string" ? <p class="mt-2 text-sm leading-normal">{description}</p> : <ul>{description.map((desc, i) => <li class="mt-2 text-sm leading-normal" key={i}>- {desc}</li>)}</ul>}
+            {typeof description === "string" ? <p class="mt-2 text-sm leading-normal">{description}</p> : <ul>{description.map((desc, i) => <li class="mt-2 text-sm leading-normal">- {desc}</li>)}</ul>}
             <p class="mt-2 text-sm leading-normal"></p>
             <ul class="flex gap-2 flex-wrap mt-2">
                 {
